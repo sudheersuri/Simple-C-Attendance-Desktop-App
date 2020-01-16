@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,17 +16,17 @@ namespace Test
         int x;
         TextBox t1;
         int btnclicked=0;
-        /* String[] students = { "Akhila", "Maneesh", "Vinitha", "Clinse", "Smit", "Aleena", "Sharine", "Arshdeep", "Simarjit", "Mansi Shekar", "Gurpreet", "Alekya", "Leela", "Anil",
-                               "Raghavendra","Preeti","Anish","Shashidar","Urvish","Sri Harsha","Mohit","Nikhil","Dharmik","Daniel","Kamaldeep","Ramanpreet","Sudheer"};
-        */
+        String[] students = { "Akhila", "Maneesh", "Vinitha", "Clinse", "Smit", "Aleena", "Sharine", "Arshdeep", "Simarjit", "Mansi Shekar", "Gurpreet", "Alekya", "Leela", "Anil",
+                               "Raghavendra","Preeti","Anish","Shashidar","Urvish","Sri Harsha","Mohit","Nikhil","Dharmik","Daniel","Kamaldeep","Sudheer"};
+        /*
         String[] students = {"Adam","Adrian","Alan","Alexander","Andrew","Benjamin","Blake" };
-
+*/
         public Form1()
         {
             InitializeComponent();
             this.Text = "Attendance";
-            Array.Sort(students, 0, students.Length-1);
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            Array.Sort(students, 0, students.Length);
+           /* this.FormBorderStyle = FormBorderStyle.FixedDialog;*/
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -41,7 +41,6 @@ namespace Test
             add_file_textbox();
             add_save_button();
             
-
         }
         private void absent_by_default()
         {
@@ -126,8 +125,8 @@ namespace Test
             b1.Width= 220;
             b1.Height = 50;
             b1.ForeColor = Color.White;
-            b1.Font = new System.Drawing.Font("Microsoft Times Roman", 20F, System.Drawing.FontStyle.Bold);
-            b1.Location = new Point(3, 14 + x);
+            b1.Font = new System.Drawing.Font("Microsoft Times Roman", 20, System.Drawing.FontStyle.Bold);
+            b1.Location = new Point(3, x);
             b1.Click += delegate (object sender2, EventArgs e2)
             {
                 btn_click(sender2, e2, i);
